@@ -1,0 +1,6 @@
+// Media Queries
+@mixin media-query($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

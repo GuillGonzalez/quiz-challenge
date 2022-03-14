@@ -1,0 +1,72 @@
+@import '../typography.scss';
+@import '../variables.scss';
+@import '../fonts.scss';
+
+.quiz {
+  &__questions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      color: $color-primary-shade-1;
+      font-size: $font-size-3;
+    }
+    &__nav {
+      
+    }
+    &__options {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $font-size-2;
+      @include media-query($size-desktop){
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      &__item {
+        font-size: $font-size-3;
+        cursor: pointer;
+        margin-top: 6px;
+        padding: 12px;
+        border-radius: 12px;
+        @include media-query($size-desktop){
+          padding: 6px;
+          width: 40%;
+        }
+        input[type="radio"]{
+          visibility: hidden;
+          position: absolute;
+        }
+        
+        &-label {
+          text-align: center;
+          height: 100%;
+          display: block;
+          margin: 0;
+          cursor: pointer;
+        }
+
+        .icon {
+          visibility: hidden;
+        }
+
+        input[type="radio"]:checked {
+         
+          & + label {
+            font-weight: $font-weight-bold;
+            &:before {
+              content: "> "
+            }
+          }
+        }
+        &:hover {
+          background-color: rgba(0,0,0,.05);
+        }
+      }
+    }
+  }
+}

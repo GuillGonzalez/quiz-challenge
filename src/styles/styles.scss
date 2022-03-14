@@ -1,0 +1,78 @@
+@import 'variables';
+@import 'fonts';
+@import 'mixins';
+@import 'form';
+
+@import 'components/select-quiz';
+@import 'components/questions.scss';
+@import 'components/results.scss';
+@import 'components/progress-bar.scss';
+
+body {
+  background-color: $secondary-color-light;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font-regular;
+  font-weight: $font-weight-regular;
+  color: $primary-color;
+  padding: 0;
+  margin: 0;
+}
+#app {
+  width: 100%;
+  padding: 2em;
+  border-radius: 0;
+  background-color: transparent;
+  text-align: center;
+    
+  @include media-query($size-desktop) {
+    border-radius: 24px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Clear Styles
+button, input[type="submit"] {
+	background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+input {
+  border:none;
+  background-image:none;
+  background-color:transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alert-inline {
+  color: $color-alert;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: $font-size-2;
+  &:hover {
+    font-weight: $font-weight-bold;
+  }
+}

@@ -1,0 +1,14 @@
+@import '../variables.scss';
+
+.progress-bar {
+  border:2px solid $primary-color;
+  height: 12px;
+  border-radius: 12px;
+  width: 200px;
+  margin: 2rem 0 0;
+  &-fill {
+    transition: 0.25s width;
+    background-color: $color-primary-shade-1;
+    height: 12px;
+  }
+}
